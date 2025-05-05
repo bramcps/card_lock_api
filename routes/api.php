@@ -30,7 +30,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/refresh', [AuthController::class, 'refresh']);
 
     // Door status - available to all authenticated users
-    Route::get('/door-status', [DoorStatusController::class, 'index']);
+    Route::get('/door_status', [DoorStatusController::class, 'index']);
 
     // Door routes - with permissions
     Route::get('/doors', [DoorController::class, 'index']);
@@ -44,8 +44,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/rfid_cards/{id}', [RfidCardController::class, 'show']);
 
     // Access logs - users can see their own logs
-    Route::get('/access-logs', [AccessLogController::class, 'index']);
-    Route::get('/access-logs/statistics', [AccessLogController::class, 'statistics']);
+    Route::get('/access_logs', [AccessLogController::class, 'index']);
+    Route::get('/access_logs/statistics', [AccessLogController::class, 'statistics']);
 
     // Alert routes - users can see alerts for doors they have access to
     Route::get('/alerts', [AlertController::class, 'index']);

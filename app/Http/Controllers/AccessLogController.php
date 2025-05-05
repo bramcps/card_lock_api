@@ -195,7 +195,7 @@ class AccessLogController extends Controller
     {
         $filter = $request->get('filter', 'Hari'); // default: Hari
 
-        $logs = AccessLog::where('status', 'Granted')
+        $logs = AccessLog::where('status', 'success')
             ->selectRaw('accessed_at')
             ->get();
 

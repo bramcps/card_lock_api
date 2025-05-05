@@ -14177,3 +14177,448 @@ LINE 1: insert into \"door_status\" (\"door_id\", \"status\", \"status_chan...
 #57 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('D:\\\\Projects\\\\ful...')
 #58 {main}
 "} 
+[2025-05-04 13:54:48] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "D:\Projects\fullstack\card-lock\api\resources\views" directory does not exist. in D:\Projects\fullstack\card-lock\api\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 D:\Projects\fullstack\card-lock\api\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('D:\\Projects\\ful...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('D:\\Projects\\ful...')
+#2 Command line code(1): getViews('D:\\Projects\\ful...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"D:\\Projects\\fullstack\\card-lock\\api\\resources\\views\" directory does not exist. in D:\\Projects\\fullstack\\card-lock\\api\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('D:\\\\Projects\\\\ful...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('D:\\\\Projects\\\\ful...')
+#2 Command line code(1): getViews('D:\\\\Projects\\\\ful...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at D:\\Projects\\fullstack\\card-lock\\api\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-05-04 14:37:48] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:526)
+[stacktrace]
+#0 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(856): Illuminate\\Routing\\UrlGenerator->route('login', Array, true)
+#1 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Configuration\\ApplicationBuilder.php(278): route('login')
+#2 [internal function]: Illuminate\\Foundation\\Configuration\\ApplicationBuilder->{closure:{closure:Illuminate\\Foundation\\Configuration\\ApplicationBuilder::withMiddleware():276}:278}(Object(Illuminate\\Http\\Request))
+#3 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(117): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))
+#4 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(104): Illuminate\\Auth\\Middleware\\Authenticate->redirectTo(Object(Illuminate\\Http\\Request))
+#5 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(87): Illuminate\\Auth\\Middleware\\Authenticate->unauthenticated(Object(Illuminate\\Http\\Request), Array)
+#6 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(61): Illuminate\\Auth\\Middleware\\Authenticate->authenticate(Object(Illuminate\\Http\\Request), Array)
+#7 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#8 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#9 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#10 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#11 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#12 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#13 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#14 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():197}(Object(Illuminate\\Http\\Request))
+#15 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():167}(Object(Illuminate\\Http\\Request))
+#16 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#19 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#22 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#24 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(61): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#26 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#28 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#30 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#32 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#34 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#35 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#36 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#37 D:\\Projects\\fullstack\\card-lock\\api\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#38 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('D:\\\\Projects\\\\ful...')
+#39 {main}
+"} 
+[2025-05-04 16:22:49] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "D:\Projects\fullstack\card-lock\api\resources\views" directory does not exist. in D:\Projects\fullstack\card-lock\api\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 D:\Projects\fullstack\card-lock\api\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('D:\\Projects\\ful...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('D:\\Projects\\ful...')
+#2 Command line code(1): getViews('D:\\Projects\\ful...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"D:\\Projects\\fullstack\\card-lock\\api\\resources\\views\" directory does not exist. in D:\\Projects\\fullstack\\card-lock\\api\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('D:\\\\Projects\\\\ful...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('D:\\\\Projects\\\\ful...')
+#2 Command line code(1): getViews('D:\\\\Projects\\\\ful...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at D:\\Projects\\fullstack\\card-lock\\api\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-05-04 16:44:55] local.ERROR: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for type integer: "-19912.363482"
+CONTEXT:  unnamed portal parameter $3 = '...' (Connection: pgsql, SQL: insert into "movement_detections" ("door_id", "has_recent_authorization", "unauthorized_duration", "detected_at", "id", "updated_at", "created_at") values (01jtdf274pth0xbf686cfps0zr, 0, -19912.363482, 2025-05-04 16:44:55, 01jte2ze6ajym4wrp9fh1rkkh0, 2025-05-04 16:44:55, 2025-05-04 16:44:55)) {"userId":"01jtadrypxrt8fnk8pv2bsbvp7","exception":"[object] (Illuminate\\Database\\QueryException(code: 22P02): SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for type integer: \"-19912.363482\"
+CONTEXT:  unnamed portal parameter $3 = '...' (Connection: pgsql, SQL: insert into \"movement_detections\" (\"door_id\", \"has_recent_authorization\", \"unauthorized_duration\", \"detected_at\", \"id\", \"updated_at\", \"created_at\") values (01jtdf274pth0xbf686cfps0zr, 0, -19912.363482, 2025-05-04 16:44:55, 01jte2ze6ajym4wrp9fh1rkkh0, 2025-05-04 16:44:55, 2025-05-04 16:44:55)) at D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:822)
+[stacktrace]
+#0 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback('insert into \"mo...', Array, Object(Closure))
+#1 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(557): Illuminate\\Database\\Connection->run('insert into \"mo...', Array, Object(Closure))
+#2 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(521): Illuminate\\Database\\Connection->statement('insert into \"mo...', Array)
+#3 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3730): Illuminate\\Database\\Connection->insert('insert into \"mo...', Array)
+#4 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(2204): Illuminate\\Database\\Query\\Builder->insert(Array)
+#5 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1384): Illuminate\\Database\\Eloquent\\Builder->__call('insert', Array)
+#6 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1212): Illuminate\\Database\\Eloquent\\Model->performInsert(Object(Illuminate\\Database\\Eloquent\\Builder))
+#7 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1188): Illuminate\\Database\\Eloquent\\Model->save()
+#8 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(399): Illuminate\\Database\\Eloquent\\Builder->{closure:Illuminate\\Database\\Eloquent\\Builder::create():1187}(Object(App\\Models\\MovementDetection))
+#9 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1187): tap(Object(App\\Models\\MovementDetection), Object(Closure))
+#10 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create(Array)
+#11 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2449): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'create', Array)
+#12 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2465): Illuminate\\Database\\Eloquent\\Model->__call('create', Array)
+#13 D:\\Projects\\fullstack\\card-lock\\api\\app\\Http\\Controllers\\MovementDetectionController.php(42): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
+#14 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(46): App\\Http\\Controllers\\MovementDetectionController->logMovement(Object(Illuminate\\Http\\Request))
+#15 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(265): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\MovementDetectionController), 'logMovement')
+#16 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(211): Illuminate\\Routing\\Route->runController()
+#17 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#18 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}(Object(Illuminate\\Http\\Request))
+#19 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():167}(Object(Illuminate\\Http\\Request))
+#20 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(63): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#22 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#23 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#24 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#25 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#26 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#27 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#28 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#29 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():197}(Object(Illuminate\\Http\\Request))
+#30 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():167}(Object(Illuminate\\Http\\Request))
+#31 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#34 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#37 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#39 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(61): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#41 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#43 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#45 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#47 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#49 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#50 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#51 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#52 D:\\Projects\\fullstack\\card-lock\\api\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#53 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('D:\\\\Projects\\\\ful...')
+#54 {main}
+
+[previous exception] [object] (PDOException(code: 22P02): SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for type integer: \"-19912.363482\"
+CONTEXT:  unnamed portal parameter $3 = '...' at D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:568)
+[stacktrace]
+#0 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(568): PDOStatement->execute()
+#1 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(809): Illuminate\\Database\\Connection->{closure:Illuminate\\Database\\Connection::statement():557}('insert into \"mo...', Array)
+#2 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback('insert into \"mo...', Array, Object(Closure))
+#3 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(557): Illuminate\\Database\\Connection->run('insert into \"mo...', Array, Object(Closure))
+#4 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(521): Illuminate\\Database\\Connection->statement('insert into \"mo...', Array)
+#5 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3730): Illuminate\\Database\\Connection->insert('insert into \"mo...', Array)
+#6 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(2204): Illuminate\\Database\\Query\\Builder->insert(Array)
+#7 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1384): Illuminate\\Database\\Eloquent\\Builder->__call('insert', Array)
+#8 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1212): Illuminate\\Database\\Eloquent\\Model->performInsert(Object(Illuminate\\Database\\Eloquent\\Builder))
+#9 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1188): Illuminate\\Database\\Eloquent\\Model->save()
+#10 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(399): Illuminate\\Database\\Eloquent\\Builder->{closure:Illuminate\\Database\\Eloquent\\Builder::create():1187}(Object(App\\Models\\MovementDetection))
+#11 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1187): tap(Object(App\\Models\\MovementDetection), Object(Closure))
+#12 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create(Array)
+#13 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2449): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'create', Array)
+#14 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2465): Illuminate\\Database\\Eloquent\\Model->__call('create', Array)
+#15 D:\\Projects\\fullstack\\card-lock\\api\\app\\Http\\Controllers\\MovementDetectionController.php(42): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
+#16 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(46): App\\Http\\Controllers\\MovementDetectionController->logMovement(Object(Illuminate\\Http\\Request))
+#17 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(265): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\MovementDetectionController), 'logMovement')
+#18 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(211): Illuminate\\Routing\\Route->runController()
+#19 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#20 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}(Object(Illuminate\\Http\\Request))
+#21 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():167}(Object(Illuminate\\Http\\Request))
+#22 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(63): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#24 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#25 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#26 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#28 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#29 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#30 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#31 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():197}(Object(Illuminate\\Http\\Request))
+#32 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():167}(Object(Illuminate\\Http\\Request))
+#33 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#36 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#39 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#41 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(61): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#43 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#45 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#47 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#49 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#51 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#52 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#53 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#54 D:\\Projects\\fullstack\\card-lock\\api\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#55 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('D:\\\\Projects\\\\ful...')
+#56 {main}
+"} 
+[2025-05-04 16:45:42] local.ERROR: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for type integer: "-19959.478272"
+CONTEXT:  unnamed portal parameter $3 = '...' (Connection: pgsql, SQL: insert into "movement_detections" ("door_id", "has_recent_authorization", "unauthorized_duration", "detected_at", "id", "updated_at", "created_at") values (01jtdf274pth0xbf686cfps0zr, 0, -19959.478272, 2025-05-04 16:45:42, 01jte30w6h5b1n31dn0j53hyjc, 2025-05-04 16:45:42, 2025-05-04 16:45:42)) {"userId":"01jtadrypxrt8fnk8pv2bsbvp7","exception":"[object] (Illuminate\\Database\\QueryException(code: 22P02): SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for type integer: \"-19959.478272\"
+CONTEXT:  unnamed portal parameter $3 = '...' (Connection: pgsql, SQL: insert into \"movement_detections\" (\"door_id\", \"has_recent_authorization\", \"unauthorized_duration\", \"detected_at\", \"id\", \"updated_at\", \"created_at\") values (01jtdf274pth0xbf686cfps0zr, 0, -19959.478272, 2025-05-04 16:45:42, 01jte30w6h5b1n31dn0j53hyjc, 2025-05-04 16:45:42, 2025-05-04 16:45:42)) at D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:822)
+[stacktrace]
+#0 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback('insert into \"mo...', Array, Object(Closure))
+#1 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(557): Illuminate\\Database\\Connection->run('insert into \"mo...', Array, Object(Closure))
+#2 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(521): Illuminate\\Database\\Connection->statement('insert into \"mo...', Array)
+#3 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3730): Illuminate\\Database\\Connection->insert('insert into \"mo...', Array)
+#4 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(2204): Illuminate\\Database\\Query\\Builder->insert(Array)
+#5 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1384): Illuminate\\Database\\Eloquent\\Builder->__call('insert', Array)
+#6 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1212): Illuminate\\Database\\Eloquent\\Model->performInsert(Object(Illuminate\\Database\\Eloquent\\Builder))
+#7 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1188): Illuminate\\Database\\Eloquent\\Model->save()
+#8 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(399): Illuminate\\Database\\Eloquent\\Builder->{closure:Illuminate\\Database\\Eloquent\\Builder::create():1187}(Object(App\\Models\\MovementDetection))
+#9 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1187): tap(Object(App\\Models\\MovementDetection), Object(Closure))
+#10 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create(Array)
+#11 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2449): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'create', Array)
+#12 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2465): Illuminate\\Database\\Eloquent\\Model->__call('create', Array)
+#13 D:\\Projects\\fullstack\\card-lock\\api\\app\\Http\\Controllers\\MovementDetectionController.php(42): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
+#14 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(46): App\\Http\\Controllers\\MovementDetectionController->logMovement(Object(Illuminate\\Http\\Request))
+#15 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(265): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\MovementDetectionController), 'logMovement')
+#16 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(211): Illuminate\\Routing\\Route->runController()
+#17 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#18 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}(Object(Illuminate\\Http\\Request))
+#19 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():167}(Object(Illuminate\\Http\\Request))
+#20 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(63): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#22 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#23 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#24 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#25 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#26 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#27 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#28 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#29 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():197}(Object(Illuminate\\Http\\Request))
+#30 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():167}(Object(Illuminate\\Http\\Request))
+#31 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#34 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#37 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#39 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(61): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#41 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#43 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#45 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#47 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#49 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#50 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#51 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#52 D:\\Projects\\fullstack\\card-lock\\api\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#53 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('D:\\\\Projects\\\\ful...')
+#54 {main}
+
+[previous exception] [object] (PDOException(code: 22P02): SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for type integer: \"-19959.478272\"
+CONTEXT:  unnamed portal parameter $3 = '...' at D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:568)
+[stacktrace]
+#0 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(568): PDOStatement->execute()
+#1 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(809): Illuminate\\Database\\Connection->{closure:Illuminate\\Database\\Connection::statement():557}('insert into \"mo...', Array)
+#2 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback('insert into \"mo...', Array, Object(Closure))
+#3 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(557): Illuminate\\Database\\Connection->run('insert into \"mo...', Array, Object(Closure))
+#4 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(521): Illuminate\\Database\\Connection->statement('insert into \"mo...', Array)
+#5 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3730): Illuminate\\Database\\Connection->insert('insert into \"mo...', Array)
+#6 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(2204): Illuminate\\Database\\Query\\Builder->insert(Array)
+#7 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1384): Illuminate\\Database\\Eloquent\\Builder->__call('insert', Array)
+#8 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1212): Illuminate\\Database\\Eloquent\\Model->performInsert(Object(Illuminate\\Database\\Eloquent\\Builder))
+#9 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1188): Illuminate\\Database\\Eloquent\\Model->save()
+#10 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(399): Illuminate\\Database\\Eloquent\\Builder->{closure:Illuminate\\Database\\Eloquent\\Builder::create():1187}(Object(App\\Models\\MovementDetection))
+#11 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1187): tap(Object(App\\Models\\MovementDetection), Object(Closure))
+#12 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create(Array)
+#13 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2449): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'create', Array)
+#14 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2465): Illuminate\\Database\\Eloquent\\Model->__call('create', Array)
+#15 D:\\Projects\\fullstack\\card-lock\\api\\app\\Http\\Controllers\\MovementDetectionController.php(42): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
+#16 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(46): App\\Http\\Controllers\\MovementDetectionController->logMovement(Object(Illuminate\\Http\\Request))
+#17 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(265): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\MovementDetectionController), 'logMovement')
+#18 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(211): Illuminate\\Routing\\Route->runController()
+#19 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#20 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}(Object(Illuminate\\Http\\Request))
+#21 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():167}(Object(Illuminate\\Http\\Request))
+#22 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(63): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#24 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#25 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#26 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#28 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#29 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#30 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#31 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():197}(Object(Illuminate\\Http\\Request))
+#32 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():167}(Object(Illuminate\\Http\\Request))
+#33 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#36 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#39 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#41 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(61): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#43 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#45 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#47 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#49 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#51 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#52 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#53 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#54 D:\\Projects\\fullstack\\card-lock\\api\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#55 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('D:\\\\Projects\\\\ful...')
+#56 {main}
+"} 
+[2025-05-04 17:28:27] local.ERROR: Command "make:UnauthorizedMovementDetected" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:UnauthorizedMovementDetected\" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view at D:\\Projects\\fullstack\\card-lock\\api\\vendor\\symfony\\console\\Application.php:726)
+[stacktrace]
+#0 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\symfony\\console\\Application.php(284): Symfony\\Component\\Console\\Application->find('make:Unauthoriz...')
+#1 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\symfony\\console\\Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(197): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1234): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 D:\\Projects\\fullstack\\card-lock\\api\\artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#5 {main}
+"} 
+[2025-05-05 02:05:33] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:526)
+[stacktrace]
+#0 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(856): Illuminate\\Routing\\UrlGenerator->route('login', Array, true)
+#1 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Configuration\\ApplicationBuilder.php(278): route('login')
+#2 [internal function]: Illuminate\\Foundation\\Configuration\\ApplicationBuilder->{closure:{closure:Illuminate\\Foundation\\Configuration\\ApplicationBuilder::withMiddleware():276}:278}(Object(Illuminate\\Http\\Request))
+#3 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(117): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))
+#4 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(104): Illuminate\\Auth\\Middleware\\Authenticate->redirectTo(Object(Illuminate\\Http\\Request))
+#5 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(87): Illuminate\\Auth\\Middleware\\Authenticate->unauthenticated(Object(Illuminate\\Http\\Request), Array)
+#6 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(61): Illuminate\\Auth\\Middleware\\Authenticate->authenticate(Object(Illuminate\\Http\\Request), Array)
+#7 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#8 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#9 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#10 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#11 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#12 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#13 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#14 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():197}(Object(Illuminate\\Http\\Request))
+#15 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():167}(Object(Illuminate\\Http\\Request))
+#16 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#19 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#22 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#24 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(61): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#26 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#28 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#30 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#32 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():183}:184}(Object(Illuminate\\Http\\Request))
+#34 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#35 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#36 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#37 D:\\Projects\\fullstack\\card-lock\\api\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#38 D:\\Projects\\fullstack\\card-lock\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('D:\\\\Projects\\\\ful...')
+#39 {main}
+"} 
