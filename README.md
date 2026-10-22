@@ -1,61 +1,56 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# card_lock_api
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+REST API untuk sistem kunci pintu berbasis kartu **RFID**: mengelola pintu, kartu, pengguna, dan mencatat tiap akses. Ini backend-nya; dashboard web-nya ada di [**card_lock_app**](https://github.com/bramcps/card_lock_app).
 
-## About Laravel
+Dibangun dengan **Laravel 12** dan autentikasi token lewat **Sanctum**, dengan pemisahan peran (admin vs pengguna biasa).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Yang bisa dilakukan
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Autentikasi**: sign in / sign out / refresh token (Sanctum)
+- **Pintu**: daftar, detail, riwayat, ubah status (buka/kunci), CRUD khusus admin
+- **Kartu RFID**: daftar dan kelola kartu, kaitkan ke pengguna (CRUD admin)
+- **Log akses**: riwayat tiap kartu dipakai, plus endpoint statistik
+- **Deteksi gerakan**: endpoint untuk perangkat mengirim event `movement`
+- **Alert**: peringatan untuk kejadian yang perlu perhatian
+- **Pengguna & izin**: kelola pengguna, aktif/nonaktif, dan hak akses (admin)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Endpoint utama
 
-## Learning Laravel
+```
+POST   /api/signin
+POST   /api/signout            (auth)
+GET    /api/user               (auth)
+GET    /api/doors              /api/doors/{id}  /api/doors/{id}/history
+GET    /api/rfid_cards         /api/rfid_cards/{id}
+GET    /api/access_logs        /api/access_logs/statistics
+GET    /api/alerts
+POST   /api/movement           (perangkat mencatat gerakan)
+GET    /api/door_status        /api/door/{id}/status
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# admin
+apiResource /api/users         + activate / deactivate
+POST/PUT/DELETE /api/doors, /api/rfid_cards, /api/permissions
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Skema data
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Migrasi menyiapkan tabel: `users`, `rfid_cards`, `doors`, `door_statuses`, `access_logs`, `movement_detections`, `alerts`, `user_permissions`.
 
-## Laravel - Sponsors
+## Menjalankan
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Butuh PHP 8.2+, Composer, dan MySQL.
 
-### Premium Partners
+```bash
+composer install
+cp .env.example .env
+php artisan key:generate
+# atur DB_* di .env
+php artisan migrate --seed      # membuat tabel + user admin awal
+php artisan serve               # http://localhost:8000
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+Semua endpoint di bawah `/api`. Setelah `signin`, kirim token di header `Authorization: Bearer <token>`.
 
-## Contributing
+## Stack
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Laravel 12 · Laravel Sanctum · MySQL · PHP 8.2
